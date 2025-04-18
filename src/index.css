@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0c0a09;
+  background-color: #f5f5f4;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2em;
+}
+
+
+:root {
+  
+}
+
+a {
+  
+}
+a:hover {
+  
+}
+
+button {
+  
+}
+button:hover {
+
+}
+button:focus,
+button:focus-visible {
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    
+  }
+  a:hover {
+    
+  }
+  button {
+    
+  }
+}
