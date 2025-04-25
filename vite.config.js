@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/dashboard-vite-react-tailwind",
+  base: "/dashboard-vite-react-tailwind/",
 })
