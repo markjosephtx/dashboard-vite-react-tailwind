@@ -1,10 +1,13 @@
 {
+  "homepage": "https://markjosephtx.github.io/dashboard-vite-react-tailwind/",
   "name": "dashboard-vite-react-tailwindcss",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "redeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
