@@ -26,8 +26,8 @@ const data = [
     },
     {
       subject: 'Schedule',
-      A: 86,
-      B: 110,
+      mobile: 86,
+      desktop: 110,
       max: 150,
     },
     {
