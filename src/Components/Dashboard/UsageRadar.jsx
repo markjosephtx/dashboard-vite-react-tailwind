@@ -46,7 +46,7 @@ const data = [
 
 function UsageRadar() {
   return (
-    <div className='col-span-4 overflow-hidden rounded border border-stone-300'>
+    <div className='col-span-4 overflow-hidden rounded border border-stone-200'>
             <div className='p-4'>
                 <h3 className='flex items-center gap-1.5 font-medium'>
                     <FiEye /> Usage
@@ -68,16 +68,16 @@ function UsageRadar() {
           <Radar 
             name="Mobile" 
             dataKey="mobile" 
-            stroke="#ad46ff" 
-            fill="#ad46ff" 
-            fillOpacity={0.6} 
+            stroke="#18181b" 
+            fill="#18181b"
+            fillOpacity={0.2} 
         />
           <Radar 
             name="Desktop" 
             dataKey="desktop" 
-            stroke="#18181b" 
-            fill="#18181b" 
-            fillOpacity={0.6} 
+            stroke="#ad46ff" 
+            fill="#ad46ff" 
+            fillOpacity={0.2} 
         />
         <Legend 
             wrapperClassName='text-xs text-stone-500'

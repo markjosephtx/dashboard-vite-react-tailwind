@@ -3,6 +3,7 @@ import StatCards from './StatCards'
 import ActivityGraph from './ActivityGraph'
 import UsageRadar from './UsageRadar'
 import RecentTransactions from './RecentTransactions'
+import AcivityAreaChart from './AcivityAreaChart'
 
 function Grid() {
   return (
@@ -11,6 +12,7 @@ function Grid() {
         <ActivityGraph />
         <UsageRadar />
         <RecentTransactions />
+        <AcivityAreaChart />
         
     </div>
   )

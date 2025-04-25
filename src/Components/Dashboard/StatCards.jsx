@@ -31,7 +31,7 @@ function StatCards() {
 
 const Card = ({ title, value, pillText, trend, period }) => {
   return (
-    <div className='p-4 rounded border border-stone-300 col-span-4'>
+    <div className='p-4 rounded border border-stone-100 col-span-4 bg-stone-100'>
       <div className='flex mb-8 items-start justify-between'>
         <div>
             <h3 className="text-stone-500 mb-2 text-sm">{title}</h3>
