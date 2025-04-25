@@ -1,7 +1,6 @@
 {
   "name": "dashboard-vite-react-tailwindcss",
   "homepage": "https://markjosephtx.github.io/dashboard-vite-react-tailwind/",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
