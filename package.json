@@ -3,7 +3,7 @@
   "homepage": "https://markjosephtx.github.io/dashboard-vite-react-tailwind/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markjosephtx/dashboard-vite-react-tailwind.git",
+    "url": "https://github.com/markjosephtx/dashboard-vite-react-tailwind.git"
   },
   "version": "0.0.0",
   "type": "module",
