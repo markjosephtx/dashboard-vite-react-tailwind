@@ -7,7 +7,7 @@ import AcivityAreaChart from './AcivityAreaChart'
 
 function Grid() {
   return (
-    <div className='px-4 grid gap-3 grid-cols-12'>
+    <div className='px-4 grid gap-4 grid-cols-12'>
         <StatCards />
         <ActivityGraph />
         <UsageRadar />

@@ -5,45 +5,45 @@ import { curveCardinal } from 'd3-shape';
 
 const data = [
     {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
+      name: 'Jan',
+      new: 4000,
+      returned: 2400,
       amt: 2400,
     },
     {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
+      name: 'Feb',
+      new: 3000,
+      returned: 1398,
       amt: 2210,
     },
     {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
+      name: 'Mar',
+      new: 2000,
+      returned: 9800,
       amt: 2290,
     },
     {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
+      name: 'Apr',
+      new: 2780,
+      returned: 3908,
       amt: 2000,
     },
     {
-      name: 'Page E',
-      uv: 1890,
-      pv: 4800,
+      name: 'May',
+      new: 1890,
+      returned: 4800,
       amt: 2181,
     },
     {
-      name: 'Page F',
-      uv: 2390,
-      pv: 3800,
+      name: 'Jun',
+      new: 7890,
+      returned: 3800,
       amt: 2500,
     },
     {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
+      name: 'Jul',
+      new: 1490,
+      returned: 4300,
       amt: 2100,
     },
   ];
@@ -52,10 +52,10 @@ const data = [
 
 function AcivityAreaChart() {
   return (
-    <div className='col-span-12 overflow-hidden rounded border border-stone-200'>
+    <div className='col-span-12 overflow-hidden rounded border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300'>
             <div className='p-4'>
                 <h3 className='flex items-center gap-1.5 font-medium'>
-                    <FiClock /> Time on App
+                    <FiClock /> Shipping Time
                 </h3>
             </div>
             <div className='h-64 px-4'>
@@ -72,11 +72,22 @@ function AcivityAreaChart() {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Area type="monotone" dataKey="uv" stroke="#ad46ff" fill="#ad46ff" fillOpacity={0.3} />
-          <Area type={cardinal} dataKey="uv" stroke="#e2bdff" fill="#e2bdff" fillOpacity={0.3} />
+          <XAxis dataKey="name" 
+            axisLine={false}
+            tickLine={false}
+            className='text-xs font-bold'
+          />
+          <YAxis 
+            className='text-xs font-bold'
+            axisLine={false}
+            tickLine={false}
+          />
+          <Tooltip 
+            wrapperClassName='text-sm rounded'
+            labelClassName='text-xs text-stone-500'
+          />
+          <Area type="monotone" dataKey="new" stroke="#A0A8FF" fill="#5160FD" fillOpacity={0.3} />
+          <Area type={cardinal} dataKey="returned" stroke="#A0A8FF" fill="#5160FD" fillOpacity={0.3} />
         </AreaChart>
       </ResponsiveContainer>
             </div>

@@ -3,6 +3,7 @@ import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 
 import { CgMoreVerticalAlt } from "react-icons/cg";
 import { useContext, createContext, useState } from 'react'
+import logo  from "./../../assets/logoipsum-custom-logo.svg"
 
 const SidebarContext = createContext()
 
@@ -13,7 +14,7 @@ export default function SidebarExpanded({ children }) {
       <nav className='h-full flex flex-col gap-2'>
         <div className='px-4 pt-2 pb-2 flex justify-between items-center'>
           <img 
-            src="./src/assets/logoipsum-custom-logo.svg" 
+            src={logo} 
             className={`overflow-hidden transition-all ${
               expanded ? "w-32" : "w-0"
             }`}
