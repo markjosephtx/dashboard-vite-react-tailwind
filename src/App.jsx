@@ -4,7 +4,7 @@ import './App.css'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Dashboard from './Components/Dashboard/Dashboard'
 import SidebarExpanded from './Components/Sidebar/SidebarExpanded'
-import { FiHome, FiBox, FiDollarSign, FiBarChart2, FiBook, FiSettings } from "react-icons/fi";
+import { FiHome, FiBox, FiDollarSign, FiBarChart2, FiBook, FiSettings, FiShoppingBag } from "react-icons/fi";
 
 
 function App() {
@@ -12,19 +12,18 @@ function App() {
   return (
     <>
     
-      <div className='grid gap-4 p-4 grid-cols-[200px_minmax(200px,_1fr)]'>
+      <div className='flex flex-col lg:flex-row gap-4 p-4'>
         <SidebarExpanded>
-          <SidebarItem icon={<FiHome size={22} />} text="Dashboard" active />
-          <SidebarItem icon={<FiBarChart2 size={22} />} text="Statistics" />
-          <SidebarItem icon={<FiHome size={22} />} text="Inventory" />
-          <SidebarItem icon={<FiBox size={22} />} text="Orders" alert />
-          <SidebarItem icon={<FiDollarSign size={22} />} text="Billings" />
+          <SidebarItem icon={<FiHome size={18} />} text="Dashboard" active />
+          <SidebarItem icon={<FiBarChart2 size={18} />} text="Statistics" />
+          <SidebarItem icon={<FiBox size={18} />} text="Inventory" />
+          <SidebarItem icon={<FiShoppingBag size={18} />} text="Orders" alert />
+          <SidebarItem icon={<FiDollarSign size={18} />} text="Billings" />
           <hr className='my-3' />
-          <SidebarItem icon={<FiSettings size={22} />} text="Settings" />
-          <SidebarItem icon={<FiBook size={22} />} text="Resources" />
-
+          <SidebarItem icon={<FiSettings size={18} />} text="Settings" />
+          <SidebarItem icon={<FiBook size={18} />} text="Resources" />
         </SidebarExpanded>
-        <Dashboard />
+        <Dashboard/>
       </div>
 
 

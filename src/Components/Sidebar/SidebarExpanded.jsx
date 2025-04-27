@@ -9,9 +9,9 @@ const SidebarContext = createContext()
 export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(true)
   return (
-    <aside className='h-screen'>
+    <aside className='overflow-scroll lg:sticky top-4 h-[calc(100vh-32px-48px)] grow-0'>
       <nav className='h-full flex flex-col gap-2'>
-        <div className='p-4 pb-2 flex justify-between items-center'>
+        <div className='px-4 pt-2 pb-2 flex justify-between items-center'>
           <img 
             src="./src/assets/logoipsum-custom-logo.svg" 
             className={`overflow-hidden transition-all ${
@@ -34,8 +34,8 @@ export default function SidebarExpanded({ children }) {
           />
           <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>
             <div className='leading-4'>
-              <h4 className='font-semibold'>John Doe</h4>
-              <span className='text-xs text-stone-600'></span>
+              <h4 className='font-semibold text-md'>John Doe</h4>
+              <span className='text-xs text-stone-500'>john.doe@gmail.com</span>
             </div>
             <CgMoreVerticalAlt size={20} />
           </div>
@@ -54,12 +54,12 @@ export function SidebarItem({ icon, text, active, alert }) {
     <li
       className={`
         relative flex items-center py-2 px-3 my-1
-        font-medium rounded-md cursor-pointer
+        font-medium text-sm rounded-md cursor-pointer
         transition-colors group
         ${
           active
-            ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            ? "bg-white text-snare-blue-600 font-semibold"
+            : "hover:bg-snare-blue-100 text-stone-500"
         }
     `}
     >
@@ -71,7 +71,7 @@ export function SidebarItem({ icon, text, active, alert }) {
       {text}
       </span> 
       {alert && (
-        <div className={`absolute right-2 w-2 h-2 rounded bg-color-snare-blue-400 
+        <div className={`absolute right-2 w-2 h-2 rounded bg-snare-blue-600
           ${expanded ? "" : "top-2"
           }`}
         />
@@ -80,7 +80,7 @@ export function SidebarItem({ icon, text, active, alert }) {
       {!expanded && (
         <div
           className={`absolute left-full rounded-md px-2 py-1 ml-6
-          bg-indigo-100 text-indigo-800 text-sm
+          bg-snare-blue-100 text-snare-blue-600 text-sm
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
       `}
