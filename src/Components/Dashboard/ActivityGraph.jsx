@@ -51,7 +51,7 @@ import {
 
 function ActivityGraph() {
   return (
-    <div className='col-span-8 overflow-hidden rounded border border-stone-200'>
+    <div className='col-span-12 lg:col-span-8 overflow-hidden rounded border border-stone-200'>
         <div className='p-4'>
             <h3 className='flex items-center gap-1.5 font-medium'>
                 <FiUser /> Activity
