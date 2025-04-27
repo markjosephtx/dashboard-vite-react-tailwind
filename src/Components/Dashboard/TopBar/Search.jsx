@@ -20,7 +20,7 @@ function Search() {
 
   return (
     <div onBlur={handleInputBlur}>
-      <div className="bg-stone-200 mb-4 relative rounded flex items-center px-2 py-1.5 text-sm">
+      <div className="bg-[#F1F3F6]  w-[300px] mb-4 relative rounded flex items-center px-4 py-2 text-sm">
         <FiSearch className="mr-2" />
         <input
           type="text"
