@@ -28,9 +28,9 @@ export default function SidebarExpanded({ children }) {
         </div>
         
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className={`flex-1 px-3 transform transition-transform duration-300 ease-[cubic-bezier(0,0.33,0,1)] ${expanded ? "translate-x-0 opacity-100" : "translate-x-[-100%] lg:translate-x-0 opacity-0 lg:opacity-100" }`}>{children}</ul>
+          <ul className={`flex-1 px-3 transform transition-all duration-300 ease-[cubic-bezier(0,0.33,0,1)] ${expanded ? "translate-x-0 opacity-100" : "translate-x-[-100%] lg:translate-x-0 opacity-0 lg:opacity-100" }`}>{children}</ul>
         </SidebarContext.Provider>
-        <div className={`flex p-3 transform transition-transform duration-300 ease-[cubic-bezier(0,0.33,0,1)] ${expanded ? "translate-x-0 opacity-100" : "translate-x-[-100%] lg:translate-x-0 opacity-0 lg:opacity-100" }`}>
+        <div className={`flex p-3 transform transition-all duration-300 ease-[cubic-bezier(0,0.33,0,1)] ${expanded ? "translate-x-0 opacity-100" : "translate-x-[-100%] lg:translate-x-0 opacity-0 lg:opacity-100" }`}>
           <img 
             src="https://ui-avatars.com/api/?background=3B49DB&color=fff&bold=true" 
             alt="Logo" 
