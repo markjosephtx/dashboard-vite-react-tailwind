@@ -74,7 +74,7 @@ export function SidebarItem({ icon, text, active, alert }) {
       </span> 
       {alert && (
         <div className={`absolute right-2 w-2 h-2 rounded bg-snare-blue-600
-          ${expanded ? "" : "top-2"
+          ${expanded ? "" : "lg:top-2"
           }`}
         />
       )}
