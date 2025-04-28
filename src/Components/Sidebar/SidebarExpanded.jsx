@@ -10,9 +10,9 @@ const SidebarContext = createContext()
 export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(true)
   return (
-    <aside className='overflow-y-scroll lg:sticky top-4 lg:h-[calc(100vh-32px-48px)] grow-0'>
+    <aside className='overflow-scroll lg:sticky top-4 lg:h-[calc(100vh-32px-48px)] grow-0'>
       <nav className='h-full flex flex-col gap-2'>
-        <div className='px-4 pt-2 pb-2 flex justify-between items-center'>
+        <div className='p-4 pb-2 flex justify-between items-center'>
           <img 
             src={logo} 
             className={`overflow-hidden transition-all ${
@@ -24,9 +24,7 @@ export default function SidebarExpanded({ children }) {
             {expanded ? <FiChevronsLeft /> : <FiChevronsRight />}
           </button>
         </div>
-        <div className={` flex flex-col ${
-              expanded ? "h-full" : "h-0"
-      }`}>
+        
         <SidebarContext.Provider value={{ expanded }}>
           <ul className='flex-1 px-3'>{children}</ul>
         </SidebarContext.Provider>
@@ -43,10 +41,6 @@ export default function SidebarExpanded({ children }) {
             </div>
             <CgMoreVerticalAlt size={20} />
           </div>
-
-        </div>
-
-
 
         </div>
         
