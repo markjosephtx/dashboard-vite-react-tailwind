@@ -22,6 +22,7 @@ function App() {
           <hr className='my-3' />
           <SidebarItem icon={<FiSettings size={18} />} text="Settings" />
           <SidebarItem icon={<FiBook size={18} />} text="Resources" />
+          <hr className='my-3' />
         </SidebarExpanded>
         <Dashboard/>
       </div>
