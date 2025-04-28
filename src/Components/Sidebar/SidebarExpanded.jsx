@@ -15,9 +15,9 @@ export default function SidebarExpanded({ children }) {
         <div className='p-4 pb-2 flex justify-between items-center'>
           <img 
             src={logo} 
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-0"
-            }`}
+            className={`overflow-hidden transition-all 
+              ${expanded ? "lg:w-32 lg:h-auto w-32 h-auto" : "lg:w-0 lg:h-0 w-32 h-auto"}
+            `}
             alt=""
           />
           <button onClick={() => setExpanded(curr =>!curr)} className='p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100'>
@@ -34,7 +34,7 @@ export default function SidebarExpanded({ children }) {
             alt="Logo" 
             className='w-10 h-10 rounded-md' 
           />
-          <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>
+          <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "lg:w-full ml-3 w-full" : "lg:w-0 w-full lg:ml-0 ml-3"}`}>
             <div className='leading-4'>
               <h4 className='font-semibold text-md'>John Doe</h4>
               <span className='text-xs text-stone-500'>john.doe@gmail.com</span>
@@ -67,7 +67,7 @@ export function SidebarItem({ icon, text, active, alert }) {
     >
       {icon}
       <span className={`overflow-hidden transition-all ${
-              expanded ? "w-52 ml-3" : "w-0"
+              expanded ? "lg:w-52 lg:ml-3 w-52 ml-3" : "lg:w-0 lg:ml-0 ml-3"
       }`}
       >
       {text}
