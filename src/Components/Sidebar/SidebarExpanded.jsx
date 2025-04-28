@@ -4,6 +4,7 @@ import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import { CgMoreVerticalAlt } from "react-icons/cg";
 import { useContext, createContext, useState } from 'react'
 import logo  from "./../../assets/logoipsum-custom-logo.svg"
+import { motion } from "motion/react"
 
 const SidebarContext = createContext()
 

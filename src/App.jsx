@@ -1,7 +1,6 @@
 import React from 'react'
 import { SidebarItem } from './Components/Sidebar/SidebarExpanded'
 import './App.css'    
-import Sidebar from './Components/Sidebar/Sidebar'
 import Dashboard from './Components/Dashboard/Dashboard'
 import SidebarExpanded from './Components/Sidebar/SidebarExpanded'
 import { FiHome, FiBox, FiDollarSign, FiBarChart2, FiBook, FiSettings, FiShoppingBag } from "react-icons/fi";
