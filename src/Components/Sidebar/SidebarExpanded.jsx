@@ -84,10 +84,9 @@ export function SidebarItem({ icon, text, active, alert }) {
 
       {!expanded && (
         <div
-          className={`absolute left-full rounded-md px-2 py-1 ml-6
-          bg-snare-blue-100 text-snare-blue-600 text-sm
-          invisible opacity-20 -translate-x-3 transition-all
-          group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
+          className={`absolute left-full rounded-md px-2 py-1 ml-2
+          bg-snare-blue-100 text-snare-blue-600 text-xs invisible opacity-20 -translate-x-3 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
+          
       `}
         >
           {text}
