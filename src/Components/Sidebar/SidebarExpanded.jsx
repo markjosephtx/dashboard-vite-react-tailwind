@@ -4,15 +4,15 @@ import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
 import { CgMoreVerticalAlt } from "react-icons/cg";
 import { useContext, createContext, useState } from 'react'
 import logo  from "./../../assets/logoipsum-custom-logo.svg"
-import { motion } from "motion/react"
+import { Link, useLocation } from 'react-router-dom';
 
 const SidebarContext = createContext()
 
 export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(true)
   return (
-    <aside className={`lg:sticky top-4 lg:h-[calc(100vh-32px-48px)] grow-0 ${
-        expanded ? "h-auto" : "h-12"
+    <aside className={`sticky top-4 lg:h-[calc(100vh-32px-48px)] grow-0 n ${
+        expanded ? "h-auto lg:bg-[#F1F3F6] bg-white/30 backdrop-blur-md  shadow-md z-10 rounded-lg lg:shadow-none lg:rounded-none" : "h-14 lg:bg-[#F1F3F6] bg-white/30 backdrop-blur-md z-10 shadow-md rounded-lg lg:shadow-none lg:rounded-none "
       }`}>
       <nav className='h-full flex flex-col gap-2'>
         <div className='p-4 pb-2 flex justify-between items-center'>
@@ -53,21 +53,16 @@ export default function SidebarExpanded({ children }) {
   )
 }
 
-export function SidebarItem({ icon, text, active, alert }) {
+export function SidebarItem({ icon, text, alert, to }) {
   const { expanded } = useContext(SidebarContext)
+  const location = useLocation();
+  const isActive = location.pathname === to;
   return (
     <li
       className={`
-        relative flex items-center py-2 px-3 my-1
-        font-medium text-sm rounded-md cursor-pointer
-        transition-colors group
-        ${
-          active
-            ? "bg-white text-snare-blue-600 font-semibold"
-            : "hover:bg-snare-blue-100 text-stone-500"
-        }
-    `}
-    >
+        relative flex items-center font-medium text-sm group`}>
+      <Link to={to} className={`flex items-center py-2 px-3 my-1 rounded-md cursor-pointer
+        transition-colors ${isActive ? 'bg-white text-snare-blue-600 font-semibold w-full' : 'hover:bg-snare-blue-100 text-stone-500'}`}> 
       {icon}
       <span className={`overflow-hidden transition-all ${
               expanded ? "lg:w-52 lg:ml-3 w-52 ml-3" : "lg:w-0 lg:ml-0 ml-3"
@@ -81,6 +76,7 @@ export function SidebarItem({ icon, text, active, alert }) {
           }`}
         />
       )}
+      </Link>
 
       {!expanded && (
         <div
