@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 
 function TopBar() {
   return (
-    <div className='border-b px-4 mb-4 mt-4 border-stone-200'>
+    <div className='border-b px-4 mb-4 mt-4 pb-4 lg:pb-0 border-stone-200'>
         <div className='flex justify-between p-0.5 flex-col lg:flex-row gap-2'>
           <Search />
           <div className='flex items-start gap-2'>
