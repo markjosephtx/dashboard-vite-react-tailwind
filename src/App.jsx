@@ -9,10 +9,10 @@ import { FiHome, FiBox, FiDollarSign, FiBarChart2, FiBook, FiSettings, FiShoppin
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dashboard-vite-react-tailwind">
       <div className='flex flex-col lg:flex-row gap-4 p-4'>
         <SidebarExpanded>
-          <SidebarItem icon={<FiHome size={18} />} text="Dashboard" to="/dashboard" />
+          <SidebarItem icon={<FiHome size={18} />} text="Dashboard" to="/" />
           <SidebarItem icon={<FiBarChart2 size={18} />} text="Statistics" to="/statistics" />
           <SidebarItem icon={<FiBox size={18} />} text="Inventory" to="/inventory" />
           <SidebarItem icon={<FiShoppingBag size={18} />} text="Orders" to="/orders" alert />
@@ -23,7 +23,7 @@ function App() {
           <hr className='my-3' />
         </SidebarExpanded>
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/inventory" element={<div>Inventory page</div>} />
           <Route path="/orders" element={<div>Orders page</div>} />
