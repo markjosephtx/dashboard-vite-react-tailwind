@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
+import { FiMenu, FiList } from "react-icons/fi";
 
 import { CgMoreVerticalAlt } from "react-icons/cg";
 import { useContext, createContext, useState } from 'react'
@@ -23,8 +23,8 @@ export default function SidebarExpanded({ children }) {
             `}
             alt=""
           />
-          <button onClick={() => setExpanded(curr =>!curr)} className='p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100'>
-            {expanded ? <FiChevronsLeft /> : <FiChevronsRight />}
+          <button onClick={() => setExpanded(curr =>!curr)} className='p-1.5 rounded-lg bg-gray-50 hover:bg-snare-blue-600 hover:text-white'>
+            {expanded ? <FiMenu /> : <FiList />}
           </button>
         </div>
         
