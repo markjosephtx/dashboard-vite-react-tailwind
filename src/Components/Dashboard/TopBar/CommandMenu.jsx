@@ -2,6 +2,7 @@ import "react-cmdk/dist/cmdk.css";
 import CommandPalette, { filterItems, getItemIndex } from "react-cmdk";
 import { useState } from "react";
 
+
 const CommandMenu = () => {
   const [page, setPage] = useState("root");
   const [open, setOpen] = useState(true);
@@ -14,16 +15,16 @@ const CommandMenu = () => {
         id: "home",
         items: [
           {
-            id: "home",
-            children: "Home",
+            id: "dasbhoard",
+            children: "Dashboard",
             icon: "HomeIcon",
-            href: "#",
+            href: "/", 
           },
           {
-            id: "settings",
-            children: "Settings",
+            id: "statistics",
+            children: "Statistics",
             icon: "CogIcon",
-            href: "#",
+            href: "/dashboard-vite-react-tailwind/statistics",
           },
           {
             id: "projects",
