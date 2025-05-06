@@ -4,6 +4,7 @@ import { SidebarItem } from './Components/Sidebar/SidebarExpanded';
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Statistics from './Components/Statistics/Statistics';
+import Settings from './Components/Settings/SettingsLayout';
 import SidebarExpanded from './Components/Sidebar/SidebarExpanded';
 import { FiGrid, FiList, FiUsers, FiBarChart2, FiBook, FiSettings, FiFolder, FiSearch, FiHelpCircle } from "react-icons/fi";
 
@@ -25,7 +26,7 @@ function App() {
               <SidebarItem icon={<FiSettings size={18} />} text="Settings" to="/settings" />
               <SidebarItem icon={<FiHelpCircle size={18} />} text="Help" to="/help" />
               <SidebarItem icon={<FiBook size={18} />} text="Resources" to="/resources" />
-              <SidebarItem icon={<FiSearch size={18} />} text="Search" to="/search" />
+              <SidebarItem icon={<FiSearch size={18} />} text="Search" to="/search"/>
             </div>
           </div>
         </SidebarExpanded>
@@ -35,8 +36,10 @@ function App() {
           <Route path="/reports" element={<div>Reports page</div>} />
           <Route path="/documents" element={<div>Documents page</div>} />
           <Route path="/messages" element={<div>Messages page</div>} />
-          <Route path="/settings" element={<div>Settings page</div>} />
+          <Route path="/settings" element={<Settings />}  />
+          <Route path="/help" element={<div>Help page</div>} />
           <Route path="/resources" element={<div>Resources page</div>} />
+          <Route path="/search" element={<div>Search page</div>} />
         </Routes>
       </div>
     </BrowserRouter>
