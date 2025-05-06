@@ -1,6 +1,5 @@
 import React from 'react'
 import SettingsSidebar from './SettingsSidebar'
-import SettingsContent from './SettingsContent'
 import SettingsHeader from './SettingsHeader'
 
 function SettingsLayout() {
