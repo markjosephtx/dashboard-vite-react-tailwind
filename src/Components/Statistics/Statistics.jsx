@@ -4,7 +4,7 @@ import Grid from './Grid'
 
 function Statistics() {
   return (
-    <div className='bg-white rounded-lg pb-4 shadow grow'>
+    <div className='bg-white pb-4 shadow grow'>
       <TopBar />
       <Grid />
         
