@@ -51,7 +51,7 @@ import {
 
 function ActivityGraph() {
   return (
-    <div className='col-span-12 lg:col-span-8 overflow-hidden rounded border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300'>
+    <div className='col-span-12 lg:col-span-8 overflow-hidden rounded border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-white shadow-sm hover:shadow-md transition-all duration-300'>
         <div className='p-4'>
             <h3 className='flex items-center gap-1.5 font-medium'>
                 <FiUser /> Activity
@@ -85,19 +85,21 @@ function ActivityGraph() {
             />
             <Tooltip 
                 wrapperClassName='text-sm rounded'
-                labelClassName='text-xs text-stone-500'/>
+                labelClassName='text-xs text-neutral-500'/>
             <Line 
                 type="monotone" 
                 dataKey="Returning" 
-                stroke="#5160FD" 
-                fill="#5160FD" 
+                stroke="#84cc16" 
+                fill="#84cc16"
+                strokeWidth={3} 
                 activeDot={{ r: 8 }} 
             />
             <Line 
                 type="monotone" 
                 dataKey="New" 
-                stroke="#18181b" 
-                fill="#18181b" 
+                stroke="#171717" 
+                fill="#171717" 
+                strokeWidth={3} 
             />
             </LineChart>
         </ResponsiveContainer>

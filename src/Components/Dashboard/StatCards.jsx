@@ -47,7 +47,7 @@ const Card = ({ title, value, pillText, trend, period, backgroundColor, textColo
         </div>
         <span className={`text-xs flex items-center gap-1 font-medium px-2 py-1 rounded ${
             trend === "up"
-              ? "bg-green-100 text-green-700"
+              ? "bg-lime-100 text-lime-700"
               : "bg-red-100 text-red-700"
           }`}
         >

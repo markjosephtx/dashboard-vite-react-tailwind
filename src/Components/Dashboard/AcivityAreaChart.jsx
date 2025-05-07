@@ -52,7 +52,7 @@ const data = [
 
 function AcivityAreaChart() {
   return (
-    <div className='col-span-12 overflow-hidden rounded border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300'>
+    <div className='col-span-12 overflow-hidden rounded border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-white shadow-sm hover:shadow-md transition-all duration-300'>
             <div className='p-4'>
                 <h3 className='flex items-center gap-1.5 font-medium'>
                     <FiClock /> Shipping Time
@@ -86,8 +86,8 @@ function AcivityAreaChart() {
             wrapperClassName='text-sm rounded'
             labelClassName='text-xs text-stone-500'
           />
-          <Area type="monotone" dataKey="new" stroke="#A0A8FF" fill="#5160FD" fillOpacity={0.3} />
-          <Area type={cardinal} dataKey="returned" stroke="#A0A8FF" fill="#5160FD" fillOpacity={0.3} />
+          <Area type="monotone" dataKey="new" stroke="#171717" fill="#525252" fillOpacity={0.3} />
+          <Area type={cardinal} dataKey="returned" stroke="#171717" fill="#525252" fillOpacity={0.3} />
         </AreaChart>
       </ResponsiveContainer>
             </div>
