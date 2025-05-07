@@ -43,7 +43,7 @@ export default function SidebarExpanded({ children }) {
               <h4 className='font-semibold text-md dark:text-white'>John Doe</h4>
               <span className='text-xs text-neutral-500 dark:text-neutral-400'>john.doe@gmail.com</span>
             </div>
-            <CgMoreVerticalAlt size={20} />
+            <CgMoreVerticalAlt size={20} className='text-neutral-500 dark:text-neutral-400'/>
           </div>
 
         </div>

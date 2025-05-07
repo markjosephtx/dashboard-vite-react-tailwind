@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <ThemeProvider>
-    <BrowserRouter BrowserRouter basename="/dashboard-vite-react-tailwind">
+    <BrowserRouter basename="/dashboard-vite-react-tailwind">
       <div className='flex flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:gap-0'>
         <SidebarExpanded>
           <div className='flex flex-col justify-between h-full'>
