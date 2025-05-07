@@ -11,7 +11,7 @@ const SidebarContext = createContext()
 export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(false)
   return (
-    <aside className={`sticky top-4 lg:h-[calc(100vh-24px)] grow-0 n ${
+    <aside className={`sticky lg:h-[calc(100vh-24px)] grow-0 ${
         expanded ? "h-auto lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100 dark:bg-neutral-800 z-10 rounded-xs lg:shadow-none lg:rounded-none" : "h-14 lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100/90 dark:bg-neutral-800 z-10 rounded-xs lg:shadow-none lg:rounded-none "
       }`}>
       <nav className='h-full flex flex-col gap-2'>
