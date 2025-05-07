@@ -12,18 +12,19 @@ export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(false)
   return (
     <aside className={`sticky top-4 lg:h-[calc(100vh-24px)] grow-0 n ${
-        expanded ? "h-auto lg:bg-neutral-100 bg-neutral-100/30 backdrop-blur-md  shadow-md z-10 rounded-xs lg:shadow-none lg:rounded-none" : "h-14 lg:bg-neutral-100 bg-neutral-100/30 backdrop-blur-md z-10 shadow-md rounded-xs lg:shadow-none lg:rounded-none "
+        expanded ? "h-auto lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100 z-10 rounded-xs lg:shadow-none lg:rounded-none" : "h-14 lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100/90 dark:bg-neutral-800 z-10 rounded-xs lg:shadow-none lg:rounded-none "
       }`}>
       <nav className='h-full flex flex-col gap-2'>
         <div className='p-4 pb-2 flex justify-between items-center'>
           <img 
             src={logo} 
+            alt="logo"
             className={`overflow-hidden transition-all duration-300 ease-[cubic-bezier(0,0.33,0,1)]
               ${expanded ? "lg:w-32 lg:h-auto w-32 h-auto" : "lg:w-0 lg:h-0 w-32 h-auto"}
+              dark:invert
             `}
-            alt=""
           />
-          <button onClick={() => setExpanded(curr =>!curr)} className='p-2 rounded-lg bg-neutral-50 hover:bg-neutral-950 hover:text-white'>
+          <button onClick={() => setExpanded(curr =>!curr)} className='p-2 rounded-lg bg-neutral-50 hover:bg-neutral-950 hover:text-white dark:bg-neutral-800 dark:text-white dark:hover:bg-white dark:hover:text-neutral-950'>
             {expanded ? <FiSidebar /> : <FiMenu />}
           </button>
         </div>
@@ -39,8 +40,8 @@ export default function SidebarExpanded({ children }) {
           />
           <div className={`flex justify-between items-center overflow-hidden transition-all ease-[cubic-bezier(0,0.33,0,1)] ${expanded ? "lg:w-full ml-3 w-full" : "lg:w-0 w-full lg:ml-0 ml-3"}`}>
             <div className='leading-4'>
-              <h4 className='font-semibold text-md'>John Doe</h4>
-              <span className='text-xs text-neutral-500'>john.doe@gmail.com</span>
+              <h4 className='font-semibold text-md dark:text-white'>John Doe</h4>
+              <span className='text-xs text-neutral-500 dark:text-neutral-400'>john.doe@gmail.com</span>
             </div>
             <CgMoreVerticalAlt size={20} />
           </div>
@@ -62,7 +63,7 @@ export function SidebarItem({ icon, text, alert, to }) {
       className={`
         relative flex items-center font-medium text-sm group`}>
       <Link to={to} className={`flex items-center py-2 px-3 my-1 rounded-md cursor-pointer
-        transition-colors ${isActive ? 'bg-neutral-950 text-white font-semibold w-full' : 'hover:bg-neutral-300 text-neutral-950'}`}> 
+        transition-colors ${isActive ? 'bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 font-semibold w-full' : 'hover:bg-neutral-300 dark:hover:bg-neutral-700 text-neutral-950 dark:text-white'}`}> 
       {icon}
       <span className={`overflow-hidden transition-all ${
               expanded ? "lg:w-52 lg:ml-3 w-52 ml-3" : "lg:w-0 lg:ml-0 ml-3"
@@ -71,7 +72,7 @@ export function SidebarItem({ icon, text, alert, to }) {
       {text}
       </span> 
       {alert && (
-        <div className={`animate-ping absolute right-2 w-2 h-2 rounded bg-neutral-600
+        <div className={`animate-ping absolute right-2 w-2 h-2 rounded bg-neutral-600 dark:bg-neutral-100
           ${expanded ? "" : "lg:top-2"
           }`}
         />

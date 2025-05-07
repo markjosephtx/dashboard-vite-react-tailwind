@@ -31,12 +31,19 @@
   --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
+@layer base {
+  body {
+    @apply bg-neutral-100 dark:bg-neutral-800;
+  }
+}
 
 body {
   font-family: 'Inter', sans-serif;
   color: #0a0a0a;
-  background-color: var(--color-background);
+  /*background-color: var(--color-background);*/
 }
+
+
 
 h1 {
   font-family: 'Inter', sans-serif;

@@ -24,7 +24,7 @@ function SettingsSidebar() {
   };
 
   return (
-    <div className="flex pt-6 gap-8">
+    <div className="flex flex-col lg:flex-row pt-6 gap-8">
       {/* Sidebar Menu */}
       <div className="w-[320px] p-4">
         <ul className="space-y-2 flex flex-col">

@@ -7,7 +7,7 @@ const DarkModeToggleImage = () => {
   const { darkMode, setDarkMode } = useDarkMode();
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4">
       {/* Light Mode Image */}
       <img
         src={lightModeImage}
