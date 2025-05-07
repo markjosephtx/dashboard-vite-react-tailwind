@@ -4,7 +4,7 @@ import Grid from './Grid'
 
 function Dashboard() {
   return (
-    <div className='bg-white pb-4 shadow grow'>
+    <div className='bg-white dark:bg-neutral-900 pb-4 shadow grow'>
       <TopBar />
       <Grid />
         
