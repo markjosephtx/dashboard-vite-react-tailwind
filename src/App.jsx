@@ -6,11 +6,14 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Statistics from './Components/Statistics/Statistics';
 import Settings from './Components/Settings/SettingsLayout';
 import SidebarExpanded from './Components/Sidebar/SidebarExpanded';
+import { ThemeProvider } from './context/ThemeContext';
 import { FiGrid, FiList, FiUsers, FiBarChart2, FiBook, FiSettings, FiFolder, FiSearch, FiHelpCircle } from "react-icons/fi";
 
 function App() {
   return (
-    <BrowserRouter basename="/dashboard-vite-react-tailwind">
+    <>
+    <ThemeProvider>
+    <BrowserRouter BrowserRouter basename="/dashboard-vite-react-tailwind">
       <div className='flex flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:gap-0'>
         <SidebarExpanded>
           <div className='flex flex-col justify-between h-full'>
@@ -43,6 +46,9 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+    </ThemeProvider>
+    </>
+    
   );
 }
 

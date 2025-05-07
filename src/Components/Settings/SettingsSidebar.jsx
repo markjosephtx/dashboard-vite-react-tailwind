@@ -31,10 +31,10 @@ function SettingsSidebar() {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`flex flex-row gap-2 items-center cursor-pointer py-2 px-3 rounded ${
+              className={`flex flex-row gap-2 items-center cursor-pointer py-2 px-3 rounded dark:text-white ${
                 activeSection === item.id
-                  ? "bg-neutral-200 text-neutral-950 font-semibold"
-                  : "hover:bg-neutral-50"
+                  ? "bg-neutral-200 text-neutral-950 dark:text-white dark:bg-neutral-700 font-semibold"
+                  : "hover:bg-neutral-50 dark:hover:bg-neutral-800"
               }`}
               onClick={() => setActiveSection(item.id)}
             >
