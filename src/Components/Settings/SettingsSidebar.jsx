@@ -4,6 +4,7 @@ import AppearanceSection from "./AppearanceSection";
 import AccountSection from "./AccountSection";
 
 
+
 function SettingsSidebar() {
   const [activeSection, setActiveSection] = useState("profile");
 
@@ -29,7 +30,7 @@ function SettingsSidebar() {
       <div className="w-[320px] p-4">
         <ul className="space-y-2 flex flex-col">
           {menuItems.map((item) => (
-            <li
+              <li
               key={item.id}
               className={`flex flex-row gap-2 items-center cursor-pointer py-2 px-3 rounded dark:text-white ${
                 activeSection === item.id

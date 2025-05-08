@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { SidebarItem } from './Components/Sidebar/SidebarExpanded';
 import './App.css';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <ThemeProvider>
-    <BrowserRouter basename="/dashboard-vite-react-tailwind">
+    <HashRouter>
       <div className='flex flex-col lg:flex-row gap-4 p-4 lg:p-0 lg:gap-0'>
         <SidebarExpanded>
           <div className='flex flex-col justify-between h-full'>
@@ -45,7 +45,7 @@ function App() {
           <Route path="/search" element={<div>Search page</div>} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
     </ThemeProvider>
     </>
     

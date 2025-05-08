@@ -7,7 +7,7 @@ function SettingsLayout() {
     <div className='bg-white dark:bg-neutral-900 p-6 flex flex-col grow shadow'>
         <SettingsHeader />
         <div className='flex'>
-            <SettingsSidebar />
+            <SettingsSidebar /> 
         </div>
         
         
