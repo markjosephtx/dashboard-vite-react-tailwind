@@ -11,7 +11,7 @@ const SidebarContext = createContext()
 export default function SidebarExpanded({ children }) {
   const [ expanded, setExpanded ] = useState(false)
   return (
-    <aside className={`sticky lg:h-[calc(100vh-24px)] grow-0 ${
+    <aside className={`sticky top-0 lg:h-[calc(100vh-24px)] grow-0 ${
         expanded ? "h-auto lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100 dark:bg-neutral-800 z-10 rounded-xs lg:shadow-none lg:rounded-none" : "h-14 lg:bg-neutral-100 lg:dark:bg-neutral-800 bg-neutral-100/90 dark:bg-neutral-800 z-10 rounded-xs lg:shadow-none lg:rounded-none "
       }`}>
       <nav className='h-full flex flex-col gap-2'>
@@ -43,7 +43,7 @@ export default function SidebarExpanded({ children }) {
               <h4 className='font-semibold text-md dark:text-white'>John Doe</h4>
               <span className='text-xs text-neutral-500 dark:text-neutral-400'>john.doe@gmail.com</span>
             </div>
-            <CgMoreVerticalAlt size={20} className='text-neutral-500 dark:text-neutral-400'/>
+            <CgMoreVerticalAlt size={20} c/>
           </div>
 
         </div>
