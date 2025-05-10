@@ -11,7 +11,7 @@ try this website at [dashboard](https://markjosephtx.github.io/dashboard-vite-re
 ## Table of contents
 
 - [Getting Started](#getting-started)
-- [Why Berry?](#why-berry)
+- [Why use this dashboard?](#why-use-this-dashboard)
 - [Technology Stack](#technology-stack)
 
 
